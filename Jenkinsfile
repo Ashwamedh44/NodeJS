@@ -5,14 +5,14 @@ pipeline{
         stage("build")
         {
             steps{
-                bat "npm run build"
+                bat "node app.js"
             }
         }
-        stage ("run"){
-            steps{
-                bat "npm run"
-            }
-        }
+        // stage ("run"){
+        //     steps{
+        //         bat "npm run"
+        //     }
+        // }
     }
     post {
         success {
